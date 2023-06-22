@@ -1,5 +1,7 @@
---- a/extras/wordgrinder.desktop	2020-10-23 23:48:53.000000000 +0200
-+++ b/extras/wordgrinder.desktop	2023-03-04 09:53:11.672615637 +0100
+diff --git a/extras/wordgrinder.desktop b/extras/wordgrinder.desktop
+index 56a593e..783b9c7 100644
+--- a/extras/wordgrinder.desktop
++++ b/extras/wordgrinder.desktop
 @@ -1,9 +1,12 @@
  [Desktop Entry]
 +Type=Application
@@ -8,11 +10,13 @@
 -Exec=xwordgrinder %f
 +Exec=/usr/bin/invoker --single-instance --type=e /usr/bin/fingerterm -e /usr/bin/wordgrinder %f
  Icon=wordgrinder
- MimeType=application/x-wordgrinder
+-MimeType=application/x-wordgrinder
 -Terminal=false
 -Type=Application
+-Categories=Office;WordProcessor
++MimeType=application/x-wordgrinder;
 +Terminal=true
- Categories=Office;WordProcessor
++Categories=Office;WordProcessor;
 +
 +[X-Sailjail]
 +Permissions=Documents
