@@ -38,7 +38,7 @@ markup, a menu interface that means you don't have to remember complex
 key sequences, HTML import and export, and some other useful features.
 
 %if "%{?vendor}" == "chum"
-PackageName: WordGrinder
+Title: WordGrinder
 Type: console-application
 DeveloperName: David Given
 PackagerName: nephros
@@ -48,7 +48,7 @@ Categories:
 Custom:
   Repo: https://github.com/davidgiven/wordgrinder
   PackagingRepo: https://github.com/sailfishos-chum/wordgrinder
-Icon: https://github.com/davidgiven/wordgrinder/blob/master/extras/icon.png
+PackageIcon: https://github.com/davidgiven/wordgrinder/blob/master/extras/icon.png
 Screenshots:
   - http://cowlark.com/wordgrinder/AF1QipP6k5K-t8kryec2t71jxChQWS6hTuFr8Qu3CHs9.jpg
   - http://cowlark.com/wordgrinder/AF1QipNpWXJ028DQWnn9KNZkZQCPXSxHHfxECYVXZOmN.jpg
