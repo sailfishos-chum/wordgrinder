@@ -1,0 +1,18 @@
+--- a/extras/wordgrinder.desktop	2020-10-23 23:48:53.000000000 +0200
++++ b/extras/wordgrinder.desktop	2023-03-04 09:53:11.672615637 +0100
+@@ -1,9 +1,12 @@
+ [Desktop Entry]
++Type=Application
+ Name=WordGrinder
+ Comment=Word processor for processing words
+-Exec=xwordgrinder %f
++Exec=/usr/bin/invoker --single-instance --type=e /usr/bin/fingerterm -e /usr/bin/wordgrinder %f
+ Icon=wordgrinder
+ MimeType=application/x-wordgrinder
+-Terminal=false
+-Type=Application
++Terminal=true
+ Categories=Office;WordProcessor
++
++[X-Sailjail]
++Permissions=Documents

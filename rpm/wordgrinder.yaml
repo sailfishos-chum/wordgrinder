@@ -1,0 +1,82 @@
+Name: wordgrinder
+Summary: Cell word processor
+Version: 0.8
+Release: 0
+Group: Applications
+License: MIT
+URL: http://cowlark.com/wordgrinder/index.html
+SCM: https://github.com/davidgiven/wordgrinder
+Sources:
+    - '%{name}-%{version}.tar.gz'
+Patches:
+  - 'makefile.patch'
+  - 'desktop.patch'
+Description: |
+
+    WordGrinder is a simple, Unicode-aware word processor that runs on the
+    console. It's designed to get the hell out of your way and let you write;
+    it does very little, but what it does it does well.
+
+    It supports basic paragraph styles, basic character styles, basic screen
+    markup, a menu interface that means you don't have to remember complex
+    key sequences, HTML import and export, and some other useful features.
+
+    %if "%{?vendor}" == "chum"
+    PackageName: WordGrinder
+    Type: console-application
+    DeveloperName: David Given
+    PackagerName: nephros
+    Categories:
+      - Office
+      - WordProcessor
+    Custom:
+      Repo: https://github.com/davidgiven/wordgrinder
+      PackagingRepo: https://github.com/sailfishos-chum/wordgrinder
+    Icon: https://github.com/davidgiven/wordgrinder/blob/master/extras/icon.png
+    Screenshots:
+      - http://cowlark.com/wordgrinder/AF1QipP6k5K-t8kryec2t71jxChQWS6hTuFr8Qu3CHs9.jpg
+      - http://cowlark.com/wordgrinder/AF1QipNpWXJ028DQWnn9KNZkZQCPXSxHHfxECYVXZOmN.jpg
+    Url:
+      Homepage: %{url}
+      Help: https://gist.github.com/davidgiven/1aba97e96a9b8f9b573b
+    %endif
+
+SetupOptions: -q -n %{name}-%{version}/upstream
+RpmLintIgnore:
+  - 'summary-too-long'
+  - 'no-changelogname-tag'
+  - 'invalid-url'
+  - 'desktopfile-without-binary'
+  - 'explicit-lib-dependency'
+#Macros:
+#  - 'foo;bar'
+#  - |
+#    spectacle_bug; hack_fix
+#    # Spectacular spectacle hack:
+#    #   abuse Macros to work around the Macro-deleting bug in 0.32
+#    #   also, add a conditional dep:
+#    %if 0%{?sailfishos_version} >= 30400
+#    BuildRequires: some-package
+#    %endif
+#Requires:
+PkgBR:
+   - ninja
+PkgConfigBR:
+   # gl
+   - freetype2
+   - ncursesw
+   - lua
+   - minizip
+   - zlib
+Configure: none
+Builder: none
+NoIconCache: true
+#BuildArch: noarch
+#AutoSubPackages:
+#  - doc
+Files:
+#  - '%license LICENSE'
+  - '%{_bindir}/*'
+  - '%{_datadir}/applications/%{name}.desktop'
+  - '%{_datadir}/icons/*/*/apps/%{name}.png'
+  - '%{_datadir}/mime-info/*'

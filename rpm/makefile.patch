@@ -1,0 +1,12 @@
+diff -Naur a/Makefile b/Makefile
+--- a/Makefile	2020-10-23 23:48:53.000000000 +0200
++++ b/Makefile	2023-03-03 21:58:29.533146885 +0100
+@@ -61,7 +61,7 @@
+ #
+ # Alternatively, use a flag specifier string like this:
+ # --cflags={-I/usr/include/thingylua} --libs={-L/usr/lib/thingylua -lthingylua}
+-LUA_PACKAGE ?= builtin
++LUA_PACKAGE ?= lua
+ 
+ # Hack to try and detect the presence of the Xft library (it's not in
+ # pkg-config).
